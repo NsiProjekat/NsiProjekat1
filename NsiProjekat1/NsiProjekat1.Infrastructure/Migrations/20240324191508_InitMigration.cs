@@ -197,7 +197,12 @@ namespace NsiProjekat1.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "40FEB7B4-B530-4EA2-B96F-582D88277E4B", "a09ab67f-02d6-4910-8659-3385759d8036", "Administrator", "ADMINISTRATOR" });
+                values: new object[,]
+                {
+                    { "3B690889-501F-4A19-B2F7-3C55F6D8BAC9", "a09ab67f-02d6-4910-8659-3385759d8038", "Teacher", "TEACHER" },
+                    { "40FEB7B4-B530-4EA2-B96F-582D88277E4B", "a09ab67f-02d6-4910-8659-3385759d8036", "Administrator", "ADMINISTRATOR" },
+                    { "891E6770-C605-4D45-B959-8906C5728935", "a09ab67f-02d6-4910-8659-3385759d8037", "StudentService", "EMPLOYEE" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Users",

@@ -182,6 +182,20 @@ namespace NsiProjekat1.Infrastructure.Migrations
                             ConcurrencyStamp = "a09ab67f-02d6-4910-8659-3385759d8036",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
+                        },
+                        new
+                        {
+                            Id = "891E6770-C605-4D45-B959-8906C5728935",
+                            ConcurrencyStamp = "a09ab67f-02d6-4910-8659-3385759d8037",
+                            Name = "StudentService",
+                            NormalizedName = "EMPLOYEE"
+                        },
+                        new
+                        {
+                            Id = "3B690889-501F-4A19-B2F7-3C55F6D8BAC9",
+                            ConcurrencyStamp = "a09ab67f-02d6-4910-8659-3385759d8038",
+                            Name = "Teacher",
+                            NormalizedName = "TEACHER"
                         });
                 });
 
