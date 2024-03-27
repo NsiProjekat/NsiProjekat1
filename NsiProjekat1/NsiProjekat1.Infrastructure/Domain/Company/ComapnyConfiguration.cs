@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace NsiProjekat1.Infrastructure.Domain.Company;
 
-public class ProductConfiguration : IEntityTypeConfiguration<NsiProjekat1.Domain.Entities.Product>
+public class CompanyConfiguration : IEntityTypeConfiguration<NsiProjekat1.Domain.Entities.Company>
 {
-    public void Configure(EntityTypeBuilder<NsiProjekat1.Domain.Entities.Product> builder)
+    public void Configure(EntityTypeBuilder<NsiProjekat1.Domain.Entities.Company> builder)
     {
-        builder.ToTable("Products");
+        builder.ToTable("Companies");
 
         builder.Property(x => x.Id)
                .ValueGeneratedNever();
