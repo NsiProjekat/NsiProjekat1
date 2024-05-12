@@ -1,6 +1,4 @@
-﻿using NsiProjekat1.Application.Common.Dto.Game;
-using NsiProjekat1.Application.Games.Commands;
-using NsiProjekat1.Domain.Common.Extensions;
+﻿using NsiProjekat1.Domain.Common.Extensions;
 using NsiProjekat1.Domain.Enums;
 using FluentValidation;
 using NsiProjekat1.Application.Common.Dto.Product;

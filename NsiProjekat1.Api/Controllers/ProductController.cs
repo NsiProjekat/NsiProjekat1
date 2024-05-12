@@ -2,6 +2,8 @@
 using NsiProjekat1.Application.Products.Commands;
 using NsiProjekat1.Application.Products.Queries;
 using Microsoft.AspNetCore.Mvc;
+using NsiProjekat1.Application.Common.Dto.Product;
+using NsiProjekat1.Domain.Common.Extensions;
 
 namespace NsiProjekat1.Api.Controllers;
 

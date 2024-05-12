@@ -25,8 +25,6 @@ public class NsiProjekat1DbContext(DbContextOptions<NsiProjekat1DbContext> optio
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=root;Database=NsiProjekat1");
     
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Company> Companies => Set<Company>();

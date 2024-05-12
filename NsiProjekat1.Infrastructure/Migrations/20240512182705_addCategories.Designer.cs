@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using NsiProjekat1.Domain.Enums;
@@ -12,9 +13,11 @@ using NsiProjekat1.Infrastructure.Contexts;
 namespace NsiProjekat1.Infrastructure.Migrations
 {
     [DbContext(typeof(NsiProjekat1DbContext))]
-    partial class NsiProjekat1DbContextModelSnapshot : ModelSnapshot
+    [Migration("20240512182705_addCategories")]
+    partial class addCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

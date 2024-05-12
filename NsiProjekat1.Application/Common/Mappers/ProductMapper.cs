@@ -1,5 +1,6 @@
 ﻿using NsiProjekat1.Application.Common.Dto.Product;
 using NsiProjekat1.Domain.Entities;
+using NsiProjekat1.Domain.Enums;
 using Riok.Mapperly.Abstractions;
 
 namespace NsiProjekat1.Application.Common.Mappers;

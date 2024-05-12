@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using NsiProjekat1.Domain.Enums;
 
 namespace NsiProjekat1.Domain.Entities;
 

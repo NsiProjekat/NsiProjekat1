@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using NsiProjekat1.Domain.Enums;
 
 namespace NsiProjekat1.Infrastructure.Domain.Product;
 
@@ -20,5 +21,10 @@ public class ProductConfiguration : IEntityTypeConfiguration<NsiProjekat1.Domain
                .WithMany(b => b.Products)
                .HasForeignKey("CompanyId")
                .IsRequired();
+        builder.Property(b => b.Category)
+            .IsRequired()
+            .HasDefaultValue(Category.Tech)
+            .HasConversion(p => p.Value,
+                p => Category.FromValue(p));
     }
 }

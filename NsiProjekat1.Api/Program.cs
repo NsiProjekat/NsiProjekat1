@@ -6,6 +6,7 @@ using NsiProjekat1.Api.Auth;
 using NsiProjekat1.Api.Filters;
 using NsiProjekat1.Application;
 using NsiProjekat1.Infrastructure;
+using NsiProjekat1.Infrastructure.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

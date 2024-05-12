@@ -8,6 +8,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NsiProjekat1.Domain", "NsiP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NsiProjekat1.Infrastructure", "NsiProjekat1.Infrastructure\NsiProjekat1.Infrastructure.csproj", "{097C68D0-DBDC-4FC9-A53D-4C9695FB362F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{948C1678-D6B3-47A3-926A-A6BAD582731C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NsiProjekat1.BaseTests", "NsiProjekat1.BaseTests\NsiProjekat1.BaseTests.csproj", "{FFCCE774-6AD6-4998-A7E3-71DBE649D385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NsiProjekat1.FunctionalTests", "NsiProjekat1.FunctionalTests\NsiProjekat1.FunctionalTests.csproj", "{B5F8A9C5-D85A-4D81-9ECD-700E7BAC911C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +36,17 @@ Global
 		{097C68D0-DBDC-4FC9-A53D-4C9695FB362F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{097C68D0-DBDC-4FC9-A53D-4C9695FB362F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{097C68D0-DBDC-4FC9-A53D-4C9695FB362F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCCE774-6AD6-4998-A7E3-71DBE649D385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCCE774-6AD6-4998-A7E3-71DBE649D385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCCE774-6AD6-4998-A7E3-71DBE649D385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCCE774-6AD6-4998-A7E3-71DBE649D385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F8A9C5-D85A-4D81-9ECD-700E7BAC911C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F8A9C5-D85A-4D81-9ECD-700E7BAC911C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F8A9C5-D85A-4D81-9ECD-700E7BAC911C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F8A9C5-D85A-4D81-9ECD-700E7BAC911C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFCCE774-6AD6-4998-A7E3-71DBE649D385} = {948C1678-D6B3-47A3-926A-A6BAD582731C}
+		{B5F8A9C5-D85A-4D81-9ECD-700E7BAC911C} = {948C1678-D6B3-47A3-926A-A6BAD582731C}
 	EndGlobalSection
 EndGlobal

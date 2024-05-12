@@ -7,9 +7,10 @@ public abstract class Category : SmartEnum<Category>
     public static Category Tech = new TechCategory();
     public static Category Phone = new PhoneCategory();
     public static Category Laptop = new LaptopCategory();
-    public static Category Desktop = new Desktop();
-    public static Category Sports = new SportsCategory();
-    public static Category FPS = new FPSCategory();
+    public static Category Desktop = new DesktopCategory();
+    public static Category Clothes = new ClothesCategory();
+    public static Category Shirt = new ShirtCategory();
+    public static Category Cap = new CapCategory();
 
     public abstract string Description { get; }
     public abstract List<Category> Subcategories { get; }
@@ -34,65 +35,76 @@ public abstract class Category : SmartEnum<Category>
         };
     }
 
-    private sealed class MultiplayerCategory : Category
+    private sealed class ClothesCategory : Category
     {
-        public MultiplayerCategory() : base(nameof(Multiplayer),
+        public ClothesCategory() : base(nameof(Clothes),
             2)
         {
         }
 
-        public override string Description => "Opis o multiplayer igrama!";
+        public override string Description => "Opis o clothes kategoriji!";
 
         public override List<Category> Subcategories => new()
         {
-            Sports, FPS
+            Shirt
         };
     }
 
-    private sealed class RPGCategory : Category
+    private sealed class PhoneCategory : Category
     {
-        public RPGCategory() : base(nameof(RPG),
+        public PhoneCategory() : base(nameof(Phone),
             3)
         {
         }
 
-        public override string Description => "Opis o RPG igrama!";
+        public override string Description => "Opis o Phone kategoriji!";
 
         public override List<Category> Subcategories => new();
     }
 
-    private sealed class SimulationCategory : Category
+    private sealed class LaptopCategory : Category
     {
-        public SimulationCategory() : base(nameof(Simulation),
+        public LaptopCategory() : base(nameof(Laptop),
             4)
         {
         }
 
-        public override string Description => "Opis o simulacijama!";
+        public override string Description => "Opis o Laptop kategoriji!";
 
         public override List<Category> Subcategories => new();
     }
     
-    private sealed class SportsCategory : Category
+    private sealed class DesktopCategory : Category
     {
-        public SportsCategory() : base(nameof(Sports),
+        public DesktopCategory() : base(nameof(Desktop),
             5)
         {
         }
 
-        public override string Description => "Opis o sportskim igrama!";
+        public override string Description => "Opis o Desktop kategoriji!";
 
         public override List<Category> Subcategories => new();
     }
     
-    private sealed class FPSCategory : Category
+    private sealed class ShirtCategory : Category
     {
-        public FPSCategory() : base(nameof(FPS),
+        public ShirtCategory() : base(nameof(Shirt),
             6)
         {
         }
 
-        public override string Description => "Opis o FPS igrama!";
+        public override string Description => "Opis o Shirt kategoriji!";
+
+        public override List<Category> Subcategories => new();
+    }
+    private sealed class CapCategory : Category
+    {
+        public CapCategory() : base(nameof(Cap),
+            7)
+        {
+        }
+
+        public override string Description => "Opis o Cap kategoriji!";
 
         public override List<Category> Subcategories => new();
     }
