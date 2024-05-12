@@ -1,0 +1,10 @@
+﻿services:
+  nsiprojekat1.api:
+    image: nsi_projekat-api
+    restart: always
+    container_name: nsi_projekat-api
+    ports:
+      - 8080:8080
+    build:
+      context: .
+      dockerfile: NsiProjekat1.Api/Dockerfile
