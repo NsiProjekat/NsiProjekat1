@@ -10,12 +10,12 @@ using FluentAssertions.Execution;
 using Moq;
 using NsiProjekat1.Application.Common.Dto.Product;
 
-namespace NsiProjekat1.FunctionalTests.Games.Commands;
+namespace NsiProjekat1.FunctionalTests.Products.Commands;
 
 public class ProductCreateCommandTests : BaseTests
 {
     [Fact]
-    public async Task GameCreateCommandTest_GivenValidGame_StatusOk()
+    public async Task ProductCreateCommandTest_GivenValidProduct_StatusOk()
     {
         //Given
         var company = new CompanyBuilder().Build();
