@@ -13,6 +13,14 @@ public class ProductController(INsiProjekat1DbContext dbContext) : ApiBaseContro
     [HttpPost]
     public async Task<IActionResult> Create(ProductCreateCommand command) => Ok(await Mediator.Send(command));
     
+    [HttpPost("test-create")]
+    public async Task<IActionResult> TestCreate(ProductTestCreateDto dto)
+    {
+        var command = dto.Json.Deserialize<ProductCreateCommand>(SerializerExtensions.SettingsWebOptions);
+        
+        return Ok(await Mediator.Send(command!));
+    }
+    
     [HttpDelete]
     public async Task<IActionResult> Delete(ProductDeleteCommand command) => Ok(await Mediator.Send(command));
 }

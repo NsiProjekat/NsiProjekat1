@@ -1,4 +1,6 @@
-﻿namespace NsiProjekat1.Domain.Entities;
+﻿using Ardalis.GuardClauses;
+
+namespace NsiProjekat1.Domain.Entities;
 
 public class Product
 {
@@ -7,14 +9,16 @@ public class Product
     public string Description { get; private set; }
 
     public Company Company { get; private set; }
+    public Category Category { get; private set; }
     
     private Product() {}
 
-    public Product(string name, string description)
+    public Product(string name, string description,Category category)
     {
         Id = Guid.NewGuid();
-        Name = name;
-        Description = description;
+        Name = Guard.Against.NullOrEmpty(name);
+        Description = Guard.Against.StringTooShort(description, 1);
+        Category= Guard.Against.Null(category);
     }
 
     public Product AddCompany(Company company)

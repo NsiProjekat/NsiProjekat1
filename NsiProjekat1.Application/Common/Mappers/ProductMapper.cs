@@ -7,13 +7,33 @@ namespace NsiProjekat1.Application.Common.Mappers;
 [Mapper]
 public static partial class ProductMapper
 {
-    public static partial ProductDetailsDto ToDto(this Product entity);
-    public static partial Product FromCreateDtoToEntity(this ProductCreateDto dto);
-    public static Product ToCustomDto(this ProductCreateDto dto, Company company)
+    public static ProductDetailsDto ToDto(this Product entity)
     {
-        var product = new Product(dto.Name, dto.Description);
+        var dto = new ProductDetailsDto(entity.Name,
+            entity.Description,
+            entity.Company.Name,
+            entity.Company.Description,
+            entity.Category.Name,
+            entity.Category
+                .Subcategories
+                .Select(x => x.Name)
+                .ToList());
+        return dto;
+    }
+    public static Product FromCreateDtoToEntity(this ProductCreateDto dto)
+    {
+        var product = new Product(dto.Name,
+            dto.Description,
+            Category.FromValue(dto.Category));
+        return product;
+    }
+    public static Product ToCustomDto(this ProductCreateDto dto, Company company, Category category)
+    {
+        var product = new Product(
+            dto.Name, 
+            dto.Description,
+            category);
         
         return product;
     }
-
 }

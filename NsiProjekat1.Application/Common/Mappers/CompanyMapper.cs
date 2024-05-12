@@ -8,9 +8,18 @@ namespace NsiProjekat1.Application.Common.Mappers;
 [Mapper]
 public static partial class CompanyMapper
 {
-    public static partial CompanyDetailsDto ToDto(this Company entity);
-    public static partial Company FromCreateDtoToEntity(this CompanyCreateDto dto);
-    public static Company ToCustomDto(this CompanyCreateDto dto)
+    public static CompanyDetailsDto ToDto(this Company entity)
+    {
+        var dto = new CompanyDetailsDto(entity.Name,
+            entity.Description);
+        return dto;
+    }
+    public static Company FromCreateDtoToEntity(this CompanyCreateDto dto)
+    {
+        var company = new Company(dto.Name,
+            dto.Description);
+        return company;
+    }public static Company ToCustomDto(this CompanyCreateDto dto)
     {
         var company = new Company(dto.Name, dto.Description);
         

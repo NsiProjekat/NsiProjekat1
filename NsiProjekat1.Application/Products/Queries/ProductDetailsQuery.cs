@@ -3,6 +3,7 @@ using NsiProjekat1.Application.Common.Interfaces;
 using NsiProjekat1.Application.Common.Mappers;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using NsiProjekat1.Application.Common.Exceptions;
 
 namespace NsiProjekat1.Application.Products.Queries;
 
@@ -16,6 +17,10 @@ public class ProductDetailsQueryHandler(INsiProjekat1DbContext dbContext) : IReq
             .Include(x => x.Company)
             .Where(x => x.Id == Guid.Parse(request.Id))
             .FirstOrDefaultAsync(cancellationToken: cancellationToken);
+        if (result == null)
+        {
+            throw new NotFoundException("Product not found.");
+        }
 
         return result?.ToDto();
     }
