@@ -26,7 +26,7 @@ jobs:
         run: docker login nsiprojekat.azurecr.io -u ${{secrets.nsi_projekat1_user}} -p ${{secrets.nsi_projekat1_pass}}
       - name: Docker Build and Push
         run: | 
-            docker build -f NsiProjeka1.Api/Dockerfile --force-rm -t nsiprojekat.azurecr.io/nsiprojekat:v1 .
+            docker build -f NsiProjekat1.Api/Dockerfile --force-rm -t nsiprojekat.azurecr.io/nsiprojekat:v1 .
             docker push nsiprojekat.azurecr.io/nsiprojekat:v1
       #- name: Dotnet tool install
       #  run: | 
