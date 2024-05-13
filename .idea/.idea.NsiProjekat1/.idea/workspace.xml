@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbd996a2-9ccf-4646-9f70-b39db3edac13" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/NsiProjekat1.FunctionalTests/Products/Commands/ProductCreateCommandTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NsiProjekat1.FunctionalTests/Products/Commands/ProductCreateCommandTests.cs" afterDir="false" />
-    </list>
+    <list default="true" id="cbd996a2-9ccf-4646-9f70-b39db3edac13" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +153,7 @@
       <workItem from="1711460947771" duration="29000" />
       <workItem from="1711537524404" duration="354000" />
       <workItem from="1715531828021" duration="7249000" />
-      <workItem from="1715543085274" duration="4642000" />
+      <workItem from="1715543085274" duration="5450000" />
     </task>
     <servers />
   </component>
@@ -173,16 +171,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/NsiProjekat1.FunctionalTests/Products/Commands/ProductCreateCommandTests.cs</url>
-          <line>40</line>
-          <properties documentPath="C:\Users\dusan\Documents\GitHub\NsiProjekat1\NsiProjekat1.FunctionalTests\Products\Commands\ProductCreateCommandTests.cs" initialLine="40" containingFunctionPresentation="Method 'GameCreateCommandTest_GivenValidGame_StatusOk'">
+          <line>36</line>
+          <properties documentPath="C:\Users\dusan\Documents\GitHub\NsiProjekat1\NsiProjekat1.FunctionalTests\Products\Commands\ProductCreateCommandTests.cs" initialLine="36" containingFunctionPresentation="Method 'ProductCreateCommandTest_GivenValidProduct_StatusOk'">
             <startOffsets>
-              <option value="1244" />
+              <option value="1149" />
             </startOffsets>
             <endOffsets>
-              <option value="1377" />
+              <option value="1225" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

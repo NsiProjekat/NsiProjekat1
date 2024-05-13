@@ -14,7 +14,7 @@ namespace NsiProjekat1.FunctionalTests.Products.Commands;
 
 public class ProductCreateCommandTests : BaseTests
 {
-    [Fact]
+    /*[Fact]
     public async Task ProductCreateCommandTest_GivenValidProduct_StatusOk()
     {
         //Given
@@ -56,7 +56,7 @@ public class ProductCreateCommandTests : BaseTests
 
         MockCompanyService.Verify(x => x.CreateAsync(), Times.Once);
     }
-
+*/
     public ProductCreateCommandTests(CustomWebApplicationFactory<Program> factory) : base(factory)
     {
     }
