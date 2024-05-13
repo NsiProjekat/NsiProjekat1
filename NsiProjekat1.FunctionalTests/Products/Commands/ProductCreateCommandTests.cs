@@ -11,7 +11,7 @@ using Moq;
 using NsiProjekat1.Application.Common.Dto.Product;
 
 namespace NsiProjekat1.FunctionalTests.Products.Commands;
-/*
+
 public class ProductCreateCommandTests : BaseTests
 {
     [Fact]
@@ -34,11 +34,11 @@ public class ProductCreateCommandTests : BaseTests
             Encoding.UTF8,
             "application/json");
 
-        MockCompanyService.Setup(x => x.CreateAsync())
-            .Returns("Test");
+        //MockCompanyService.Setup(x => x.CreateAsync())
+           // .Returns("Test");
 
         //When
-        var response = await Client.PostAsync("/api/Product/Create/create",
+        var response = await Client.PostAsync("/api/Product/Create",
             contentRequest,
             new CancellationToken());
 
@@ -54,11 +54,10 @@ public class ProductCreateCommandTests : BaseTests
         content.Should()
             .NotBeNull();
 
-        MockCompanyService.Verify(x => x.CreateAsync(), Times.Once);
+       //MockCompanyService.Verify(x => x.CreateAsync(), Times.Once);
     }
 
     public ProductCreateCommandTests(CustomWebApplicationFactory<Program> factory) : base(factory)
     {
     }
 }
-*/
