@@ -28,7 +28,6 @@ jobs:
         run: | 
             docker build -f NsiProjekat1.Api/Dockerfile --force-rm -t nsiprojekat.azurecr.io/nsiprojekat:v1 .
             docker push nsiprojekat.azurecr.io/nsiprojekat:v1
-            docker run -d -p 8080:8080 nsiprojekat.azurecr.io/nsiprojekat:v1
       - name: Dotnet tool install
         run: | 
             dotnet tool install --global dotnet-ef
