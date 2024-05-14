@@ -24,10 +24,11 @@ jobs:
         run: dotnet test --configuration Release NsiProjekat1.sln --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
       - name: Login
         run: docker login nsiprojekat.azurecr.io -u ${{secrets.nsi_projekat1_user}} -p ${{secrets.nsi_projekat1_pass}}
-      - name: Docker Build and Push
+      - name: Docker Build and Push and Run
         run: | 
             docker build -f NsiProjekat1.Api/Dockerfile --force-rm -t nsiprojekat.azurecr.io/nsiprojekat:v1 .
             docker push nsiprojekat.azurecr.io/nsiprojekat:v1
+            docker run -d -p 8080:8080 nsiprojekat.azurecr.io/nsiprojekat:v1
       - name: Dotnet tool install
         run: | 
             dotnet tool install --global dotnet-ef
